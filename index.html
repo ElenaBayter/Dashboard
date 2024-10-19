@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+    <link rel="icon" type="images/x-icon" href="./img/hospital.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="body-wrapper">
+        <img class="burger-icon" src="./img/burger.svg" />
+        <section class="side_menu">
+            <h1 class="main-title"><img src="./img/setting.svg" alt="settings"/>Dashboard</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <div class="display-flex-gap">
+                                <img class="icon" src="./img/dashboard-icon.svg" alt="dashboard-icon"/>
+                                <p>Dashboard</p>  
+                            </div>
+                            <img class="icon" src="./img/arrow-right.svg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <div class="display-flex-gap">
+                                <img class="icon" src="./img/product-icon.svg" alt="product-icon"/>
+                                <p>Product</p>  
+                            </div>
+                            <img class="icon" src="./img/arrow-right.svg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <div class="display-flex-gap">
+                                <img class="icon" src="./img/customers-icon.svg" alt="customers-icon"/>
+                                <p>Customers</p>  
+                            </div>
+                            <img class="icon" src="./img/arrow-right.svg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <div class="display-flex-gap">
+                                <img class="icon" src="./img/income-icon.svg" alt="income-icon"/>
+                                <p>Income</p>  
+                            </div>
+                            <img class="icon" src="./img/arrow-right.svg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <div class="display-flex-gap">
+                                <img class="icon" src="./img/promote-icon.svg" alt="promote-icon"/>
+                                <p>Promote</p>  
+                            </div>                    
+                            <img class="icon" src="./img/arrow-right.svg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
+                            <div class="display-flex-gap">
+                                <img class="icon" src="./img/help-icon.svg" alt="help-icon"/>
+                                <p>Help</p>  
+                            </div>
+                            <img class="icon" src="./img/arrow-right.svg"/>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="user-card">
+                <img src="./img/manager-photo.png" alt="manager-photo"/>
+                <div>
+                    <h4 class="bold-text">Evano</h4>
+                    <p class="sm-text">Project Manager</p>
+                </div>
+            </div>
+        </section>
+        <section class="customers">
+            <h2>Hello Evano 👋🏼,</h2>
+            <div class="customers-wrapper">
+                <div class="customers_top">
+                    <div>
+                        <h2>All Customers</h2>
+                        <p class="green">Active Members</p>    
+                    </div>
+                    <input class="input-with-icon" type="text" placeholder="search" />
+                </div>
+                <table>
+                    <thead>
+                        <tr class="table-headers">
+                            <th>Customer Name</th>
+                            <th>Company</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Country</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody class="table-body"></tbody>
+                </table>
+                <div class="customers-bottom">
+                    <p>Showing Data 1 to 8 of 256K entries</p>
+                    <div class="pagination">
+                        <button class="page" id="prev" disabled><img src="./img/pagination-left.svg"/></button>
+                        <span id="pageNumbers"></span>
+                        <button class="page" id="next"><img src="./img/pagination-right.svg"/></button>
+                    </div>
+                </div>
+                
+            </div>
+            
+                    
+        </section>
+    </div>
+    
+
+    <script src="script.js"></script>
+    <script src="customers.js"></script>
+</body>
