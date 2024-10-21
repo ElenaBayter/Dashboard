@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => getCustomers(1));
 
 const customersEl = document.querySelector(".table-body");
+const customersElMobile = document.querySelector('.mobile-table')
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const pageNumbersEl = document.getElementById('pageNumbers');
@@ -22,10 +23,12 @@ async function getCustomers(page) {
 // Display customers for the current page
 function displayCustomers(page) {
     customersEl.innerHTML = ""; // Clear previous data
+    customersElMobile.innerHTML = "";
     const startIndex = (page - 1) * resultsPerPage;
     const endIndex = page * resultsPerPage;
     const customersList = allCustomers.slice(startIndex, endIndex);
     createItems(customersList);
+    createMobileItems(customersList);
     currentPage = page;
     createPageNumbers(); // Update page numbers
 }
@@ -39,7 +42,15 @@ function createItems(data) {
         );
     });
 }
-
+function createMobileItems(data) {
+    data.forEach((item) => {
+        customersElMobile.insertAdjacentHTML(
+            "beforeend",
+            getMobileItem(item.name.first, item.name.last, item.phone, item.email)
+        );
+    });
+}
+ 
 // Generate HTML for each table row
 function getItem(first, last, company, phone, email, country) {
     return `
@@ -49,7 +60,16 @@ function getItem(first, last, company, phone, email, country) {
             <td>${phone}</td>
             <td>${email}</td>
             <td>${country}</td>
-            <td><button>Active</button></td>
+            <td><button class='activeBtn'>Active</button></td>
+        </tr>
+    `;
+}
+function getMobileItem(first, last, phone, email) {
+    return `
+        <tr class='table-row'>
+            <td>${first} ${last}</td>
+            <td>${phone}</td>
+            <td>${email}</td>
         </tr>
     `;
 }

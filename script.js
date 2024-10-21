@@ -1,13 +1,12 @@
+const burger = document.querySelector('.burger-icon');
+const sideMenu = document.querySelector('.side_menu');
 
-document.querySelector('.burger-icon').addEventListener('click', function() {
-    const burger = document.querySelector('.burger-icon');
-    const sideMenu = document.querySelector('.side_menu');
-    sideMenu.classList.toggle('open'); // відкриває або закриває меню
+burger.addEventListener('click', function() {
+    sideMenu.classList.add('open'); // відкриває меню
     burger.style.display = 'none';
 });
+
 document.querySelector('.main-title').addEventListener('click', () => {
-    const burger = document.querySelector('.burger-icon');
-    const sideMenu = document.querySelector('.side_menu');
-    sideMenu.classList.remove('open');
+    sideMenu.classList.remove('open'); // закриває меню
     burger.style.display = 'block';
 })

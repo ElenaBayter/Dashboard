@@ -9,6 +9,7 @@
     <title>Dashboard</title>
     <link rel="icon" type="images/x-icon" href="./img/hospital.ico">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="body-wrapper">
@@ -101,9 +102,14 @@
                             <th>Country</th>
                             <th>Status</th>
                         </tr>
+                        <tr class="table-headers-mobile">
+                            <th>Customer Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                        </tr>
                     </thead>
-                    
                     <tbody class="table-body"></tbody>
+                    <tbody class="mobile-table"></tbody>
                 </table>
                 <div class="customers-bottom">
                     <p>Showing Data 1 to 8 of 256K entries</p>
@@ -113,14 +119,9 @@
                         <button class="page" id="next"><img src="./img/pagination-right.svg"/></button>
                     </div>
                 </div>
-                
-            </div>
-            
-                    
+            </div>           
         </section>
     </div>
-    
-
     <script src="script.js"></script>
     <script src="customers.js"></script>
 </body>
